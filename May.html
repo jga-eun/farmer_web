@@ -1,0 +1,108 @@
+<!-- main.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>5월 제철 농산물</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            border: 40px solid #AFD3B7; /* 테두리 추가 */
+        }
+
+        #banner {
+            background-color: #ffffff;
+            height: 100px;
+            text-align: center;
+            padding-top: 30px;
+            color: #000000;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(2, calc(50% - 20px)); /* 각 버튼의 크기를 50%로 조절 */
+            grid-gap: 20px;
+            grid-row-gap: 30px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            width: 100%; /* 버튼의 너비를 100%로 설정 */
+            height: 150px;
+            background-color: #E6FACF;
+            border-radius: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none; /* 테두리 없앰 */
+            outline: none;
+        }
+
+        #backButton {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer; /* 클릭모션 */
+        }
+
+        #homeButton {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="banner">5월 제철 농산물</div>
+
+    <div class="button-container">
+
+        <button class="button" id="button1">고사리</button>
+        <button class="button" id="button2">두릅</button>
+        <button class="button" id="button3">딸기</button>
+        <button class="button" id="button4">마늘</button>
+        <button class="button" id="button5">매실</button>
+        <button class="button" id="button6">비트</button>
+        <button class="button" id="button7">살구</button>
+        <button class="button" id="button8">양배추</button>
+        <button class="button" id="button9">양파</button>
+        <button class="button" id="button10">오이</button>
+        <button class="button" id="button11">취나물</button>
+        <button class="button" id="button12">피망</button>
+
+    </div>
+    <button id="backButton" onclick="goBack()">Back</button>
+    <button id="homeButton" onclick="goHome()">Home</button>
+    <script>
+        // 뒤로가기 함수 
+        function goBack() {
+            window.history.back();
+        }
+        // 홈으로 가기 함수
+        function goHome() {
+            window.location.href = "http://127.0.0.1:5500/main.html";
+        }
+    </script>
+
+</body>
+
+</html>
