@@ -4,7 +4,9 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <title>3월 제철 농산물</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
         body {
             background-color: #ffffff;
@@ -21,20 +23,14 @@
             font-size: 50px;
             font-weight: bold;
         }
-
-        .button-container {
-            display: grid;
-            grid-template-columns: repeat(2, calc(50% - 20px)); /* 각 버튼의 크기를 50%로 조절 */
-            grid-gap: 20px;
-            grid-row-gap: 30px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
         .button {
-            width: 100%; /* 버튼의 너비를 100%로 설정 */
+            width: 350px;
             height: 150px;
             background-color: #E6FACF;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            padding-left: 4px;
+            padding-right: 4px;
             border-radius: 15px;
             font-size: 24px;
             font-weight: bold;
@@ -43,9 +39,17 @@
             justify-content: center;
             border: none; /* 테두리 없앰 */
             outline: none;
+            justify-self: center;
         }
-
-        #backButton {
+        .grid-container {
+        display: grid;
+        column-gap: 0px;
+        row-gap:20px;
+        grid-template-columns: auto auto;
+        background-color: #ffffff;
+        padding: 10px;
+        }
+        #backButton { 
             position: fixed;
             bottom: 10px;
             left: 10px;
@@ -54,9 +58,8 @@
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
-            cursor: pointer; /* 클릭모션 */
+            cursor: pointer;/* 클릭모션 */
         }
-
         #homeButton {
             position: fixed;
             bottom: 10px;
@@ -74,8 +77,7 @@
 <body>
     <div id="banner">3월 제철 농산물</div>
 
-    <div class="button-container">
-
+    <div class="grid-container">
         <button class="button" id="button1">금귤</button>
         <button class="button" id="button2">냉이</button>
         <button class="button" id="button3">달래</button>
@@ -88,7 +90,7 @@
         <button class="button" id="button10">우엉</button>
         <button class="button" id="button11">체리</button>
         <button class="button" id="button12">한라봉</button>
-
+        <br>
     </div>
     <button id="backButton" onclick="goBack()">Back</button>
     <button id="homeButton" onclick="goHome()">Home</button>
